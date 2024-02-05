@@ -1,0 +1,10 @@
+<div class="{{ content.settings.attribution_type }}">
+    {% if content.title %}
+    <h2>{{ content.title }}</h2>
+    {% endif %}
+    {{ content.text|bardHtml }}
+    {{ content.name }}
+    {% if content.image %}
+    <img src="{{ content.image.0 }}" class="{{ content.settings.image_type }}">
+    {% endif %}
+</div>

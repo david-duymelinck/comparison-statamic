@@ -1,0 +1,156 @@
+title: Person
+fields:
+  -
+    handle: portret
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Portret
+      icon: assets
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: name
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Name
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: contacts
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            contact:
+              display: Contact
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: label
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Label
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: type
+                  field:
+                    options:
+                      phone: Phone
+                      email: E-mail
+                      twitter: Twitter
+                      facebook: Facebook
+                      linkedin: LinkedIn
+                    inline: false
+                    cast_booleans: false
+                    type: radio
+                    display: Type
+                    icon: radio
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: email
+                  field:
+                    input_type: email
+                    antlers: false
+                    type: text
+                    display: E-mail
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      type: 'equals email'
+                -
+                  handle: phone
+                  field:
+                    input_type: tel
+                    antlers: false
+                    type: text
+                    display: Phone
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      type: 'equals phone'
+                -
+                  handle: link
+                  field:
+                    input_type: url
+                    antlers: false
+                    type: text
+                    display: Link
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    unless:
+                      type: 'contains_any email, phone'
+      type: replicator
+      display: Contacts
+      icon: replicator
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: introduction
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Introduction
+      icon: text
+      localizable: true
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

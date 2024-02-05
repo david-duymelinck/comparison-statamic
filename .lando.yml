@@ -1,0 +1,13 @@
+name: cms-comp
+recipe: laravel
+config:
+  webroot: public
+  php: '8.2'
+proxy:
+  appserver:
+    - cms-comp.lndo.site
+    - cms-comp2.lndo.site
+tooling:
+  statamic:
+    service: appserver
+    command: statamic

@@ -1,0 +1,90 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              localizable: false
+              validate:
+                - required
+          -
+            handle: section
+            field:
+              collapse: false
+              previews: true
+              max_sets: 1
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    attribution:
+                      display: Attribution
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: attribution
+                    cta:
+                      display: CTA
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: cta
+                    grid:
+                      display: Grid
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: grid
+                    image:
+                      display: Image
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: image
+                    text:
+                      display: Text
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: text
+                    video:
+                      display: Video
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: video
+              type: replicator
+              display: Section
+              icon: replicator
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+title: 'Reusable section'

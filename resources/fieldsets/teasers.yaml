@@ -1,0 +1,33 @@
+title: Teasers
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: entries_field
+    field:
+      max_items: 4
+      mode: default
+      create: true
+      collections:
+        - pages
+      type: entries
+      display: 'Entries Field'
+      icon: entries
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

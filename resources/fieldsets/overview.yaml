@@ -1,0 +1,30 @@
+title: Overview
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      localizable: true
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: collection
+    field:
+      max_items: 1
+      mode: default
+      type: collection_blueprints
+      display: Collection
+      icon: collection_blueprints
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

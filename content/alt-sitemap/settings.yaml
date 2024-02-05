@@ -1,0 +1,19 @@
+default_collection_priorities:
+  -
+    id: ls8s9uxs
+    collection: pages
+    priority: 0.5
+    type: collection_priority
+    enabled: true
+  -
+    id: ls8sa6c4
+    collection: only_english
+    priority: 0.5
+    type: collection_priority
+    enabled: true
+  -
+    id: ls8safll
+    collection: only_on_1
+    priority: 0.5
+    type: collection_priority
+    enabled: true

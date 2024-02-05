@@ -1,0 +1,21 @@
+title: 'Only English'
+sites:
+  - '1 en'
+  - '2 en'
+propagate: false
+template: '@blueprint'
+revisions: false
+route: '{parent-uri]/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+origin_behavior: root
+structure:
+  root: false
