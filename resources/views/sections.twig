@@ -18,4 +18,17 @@
             {% endif %}
         {% endif %}
     {% endfor %}
+
+    <section>
+        {% set contactForm = getForm('contact') %}
+        <form method="{{ contactForm.attrs.method }}" action="{{ contactForm.attrs.action }}">
+          {% for field in contactForm.fields %}
+               {% if field.type == "text"%}
+                    {% if field.hide_display == false %}<label>{{ field.display }}</label>{% endif %}
+                    <input type="{{ field.input_type }}" name="{{ field.handle }}">
+                {% endif %}
+          {% endfor %}
+            <button type="submit">{{ "Contact us"|trans }}</button>
+        </form>
+    </section>
 {% endblock %}

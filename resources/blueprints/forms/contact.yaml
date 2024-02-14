@@ -11,7 +11,7 @@ tabs:
               antlers: false
               type: text
               display: Name
-              localizable: false
+              localizable: true
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -24,7 +24,7 @@ tabs:
               antlers: false
               type: text
               display: E-mail
-              localizable: false
+              localizable: true
               listable: hidden
               instructions_position: above
               visibility: visible

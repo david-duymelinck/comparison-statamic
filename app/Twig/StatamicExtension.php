@@ -61,7 +61,9 @@ class StatamicExtension extends AbstractExtension
         $form = Statamic::tag('form:create')->in($handle)->fetch();
 
         $form['fields'][] = [
+          'input_type' => 'hidden',
           'handle' => '_token',
+          'type' => 'text',
           'hide_display' => true,
           'display' => 'csrf token',
           'value' => csrf_token(),
