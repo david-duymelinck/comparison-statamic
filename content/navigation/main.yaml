@@ -1,4 +1,6 @@
-title: Main
+title: 'Main 1'
 collections:
   - pages
+  - only_english
+  - only_on_1
 root: true

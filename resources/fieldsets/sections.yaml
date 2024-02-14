@@ -61,9 +61,29 @@ fields:
               fields:
                 -
                   import: video
+            reusable:
+              display: Reusable
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: reusable
+                  field:
+                    max_items: 1
+                    mode: default
+                    create: true
+                    collections:
+                      - reusable_sections
+                    type: entries
+                    display: Reusable
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
       type: replicator
       display: Items
-      icon: replicator
       localizable: true
       listable: hidden
       instructions_position: above

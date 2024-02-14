@@ -7,8 +7,7 @@ sites:
   - '2 fr'
   - '2 nl'
 propagate: false
-template: '@blueprint'
-layout: layout
+template: sections
 revisions: false
 route: '{parent_uri}/{slug}'
 date: true

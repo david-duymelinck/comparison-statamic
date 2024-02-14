@@ -31,14 +31,19 @@ class AppServiceProvider extends ServiceProvider
             } else {
                 $entries = Entry::query()
                             ->where(function($query) use ($entry) {
-                                $query->where('origin', $entry->origin())
-                                    ->orWhere('id', $entry->origin());
+                                $query->where('origin', $entry->origin()->id())
+                                    ->orWhere('id', $entry->origin()->id());
                             })
                             ->where('id', '!=', $entry->id())
                             ->get();
             }
 
-            return $entries;
+            $siteGroup = $entry->site()->attributes()['group'];
+
+            return $entries->filter(function($item) use ($siteGroup) {
+                    return $item->site()->attributes()['group'] === $siteGroup;
+                })
+                ->all();
         });
     }
 }

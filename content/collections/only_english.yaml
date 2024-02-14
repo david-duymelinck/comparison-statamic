@@ -3,7 +3,7 @@ sites:
   - '1 en'
   - '2 en'
 propagate: false
-template: '@blueprint'
+template: sections
 revisions: false
 route: '{parent-uri]/{slug}'
 date: true

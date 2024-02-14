@@ -8,7 +8,6 @@ sites:
   - '2 nl'
 propagate: true
 template: reusable_section
-layout: layout
 revisions: false
 slugs: false
 sort_dir: asc

@@ -1,0 +1,9 @@
+{% set nav = getNav(site.attributes.group == 1 ? "main" : "main_2") %}
+<nav>
+    {% for link in nav %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+    {% for translation in translations %}
+        <a href="{{ translation.url }}">{{ translation.title }}</a>
+    {% endfor %}
+</nav>

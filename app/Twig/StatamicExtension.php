@@ -31,6 +31,7 @@ class StatamicExtension extends AbstractExtension
             new TwigFunction('getForm', $this->getForm(...)),
             new TwigFunction('getAsset', $this->getAsset(...)),
             new TwigFunction('getNav', $this->getNav(...)),
+            new TwigFunction('seo', $this->getSEO(...), ['needs_context' => true, 'is_safe' => ['html']]),
             ];
     }
 
@@ -88,5 +89,12 @@ class StatamicExtension extends AbstractExtension
         $nav = Statamic::tag('nav')->handle($handle)->fetch();
 
         return $nav;
+    }
+
+    public function getSEO($context) {
+        $seo = Statamic::tag('alt_seo:meta')->context($context)->fetch();
+
+
+        return $seo;
     }
 }
